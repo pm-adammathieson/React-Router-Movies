@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
@@ -22,6 +23,7 @@ export default class App extends Component {
     return (
       <div>
         <SavedList list={this.state.savedList} />
+        <Route exact path='/' component={MovieList}/>
         <div>Replace this Div with your Routes</div>
       </div>
     );
